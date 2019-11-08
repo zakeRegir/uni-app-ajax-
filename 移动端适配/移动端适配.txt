@@ -1,0 +1,8 @@
+1.设计稿宽度为750px,比例大小100px=1rem
+https://www.jianshu.com/p/fa258775c9b5
+
+2.淘宝和网易的适配，网易中与方法一的比例一样，淘宝的可以使用less/sass定义变量
+https://www.cnblogs.com/mary-123/p/10911313.html
+
+kaola考拉编译工具下载地址(编译less/sass)
+http://koala-app.com/
