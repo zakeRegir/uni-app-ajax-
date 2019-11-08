@@ -1,0 +1,9 @@
+在main.js中
+
+import api from './components/common/vmeitime-http/'	//引入封装的请求方法
+
+//全局变量
+Vue.prototype.$ajax = api;
+
+在外部使用： this.$ajax.xxx
+请求接口的封装，参考index.js文件
