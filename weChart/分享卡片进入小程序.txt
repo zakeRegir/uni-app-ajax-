@@ -1,0 +1,8 @@
+需求：分享小程序中的商品
+1.在商品页面中调用onShareAppMessage生命周期函数
+	路径中应该传入商品页面所需要的参数，例如商品的id等
+2.在App.vue中调用onLaunch生命周期函数
+	onLaunch：仅可在App.vue中监听，在其它页面监听无效。初始化完成时触发（全局只触发一次）
+	根据options.scene来判断小程序的打开方式
+	scene：场景值
+	查看场景值：https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html
