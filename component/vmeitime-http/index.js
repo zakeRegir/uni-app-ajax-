@@ -1,4 +1,4 @@
-import http from './interface'
+﻿import http from './interface'
 
 /**
  * 将业务所有接口统一起来便于维护

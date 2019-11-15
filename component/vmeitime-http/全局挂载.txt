@@ -1,3 +1,31 @@
 在main.js中
 
-import api from './components/common/vmeitime-http/'	//封装请求方法
+1.引入封装请求方法
+import api from './components/common/vmeitime-http/'	
+
+2.全局变量
+Vue.prototype.$ajax = api;
+
+3.在interface.js文件中封装请求地址和请求头，具体看文件中的示例
+
+4.在index.js文件中封装请求，并暴露
+export const classList = (data) => {
+	return http.request({
+		url: '/api/hd/shop/classList',
+		method: 'post',
+		data
+	})
+}
+
+//默认暴露
+export default {
+	classList1 ，
+	classList2，
+	。。。。。。
+	//所有封装的请求接口，全部在这里暴露
+}
+
+5.在.vue文件中使用
+this.$ajax.classList ({
+	data	//请求参数
+})
