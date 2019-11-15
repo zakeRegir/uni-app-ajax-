@@ -1,0 +1,19 @@
+//输入框只能输入合法金额
+		$("input[type='text']").keyup(function () {
+		    var reg = $(this).val().match(/\d+\.?\d{0,2}/);
+		    var txt = '';
+		    if (reg != null) {
+		       txt = reg[0];
+		    }
+		    $(this).val(txt);
+		}).change(function () {
+		    $(this).keypress();
+		    var v = $(this).val();
+		    if (/\.$/.test(v)){
+		       $(this).val(v.substr(0, v.length - 1));
+		    }
+		});
+//在取值的时候按照要求处理，这样就能去除前面有多个0的情况
+//例如：保留两位小数--》
+//e.detail.value=e.detail.value*1 +1/100000000	//js在处理浮点时，有偏差
+//this.amount = Math.floor(e.detail.value * 100) / 100
